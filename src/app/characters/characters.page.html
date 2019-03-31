@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>characters</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor = 'let c of characters'>
+      <ion-avatar slot="start">
+        <img src = {{c.image}}>
+      </ion-avatar>
+      <ion-label (click) = 'getCharacter($event)'>
+        {{c.name}}
+      </ion-label>
+      <input value={{c.id}} type="hidden">
+    </ion-item>
+  </ion-list>
+</ion-content>
