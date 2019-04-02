@@ -1,43 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>All about {{character.name}}</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class = 'loading' *ngIf = '!isLoaded'>
-    <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>  
-</ion-content>
-
-<ion-content *ngIf = 'isLoaded'>
-    <ion-card>
-        <ion-card-header>
-          <ion-card-subtitle>Character</ion-card-subtitle>
-          <ion-card-title>{{character.name}}</ion-card-title>
-        </ion-card-header>
-
-        <ion-avatar>
-            <img src={{character.image}}>
-        </ion-avatar>
-      
-        <ion-card-content>
-
-        </ion-card-content>
-      </ion-card>
-
-      <ion-list>
-          <ion-item>
-            <ion-label><b>Status:</b> {{character.status}}</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label><b>Species:</b> {{character.species}}</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label><b>Gender:</b> {{character.gender}}</ion-label>
-          </ion-item>
-          <ion-item>
-            <ion-label><b>Origin:</b> {{character.origin.name}}</ion-label>
-          </ion-item>
-
-      </ion-list>
-
-</ion-content>
+<app-character
+[characterID] = 'characterID'
+>
+</app-character>

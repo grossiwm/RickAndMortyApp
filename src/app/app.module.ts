@@ -1,3 +1,4 @@
+import { CharacterComponent } from './character/character.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -11,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ModalPage } from './modal/modal.page';
 
 @NgModule({
-  declarations: [AppComponent, ModalPage],
+  declarations: [AppComponent, ModalPage, CharacterComponent],
   entryComponents: [ModalPage],
   imports: [
     BrowserModule,

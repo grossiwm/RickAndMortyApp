@@ -8,23 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ModalPage implements OnInit {
 
   @Input() characterID: number;
+  @Input() content: string;
 
   constructor() { }
 
-  character = {};
-  isLoaded = false;
-
-  async request() {
-    const url = `https://rickandmortyapi.com/api/character/${this.characterID}`;
-    const response = await fetch(url);
-    const json = await response.json();
-    this.character = json;
-    this.isLoaded = true;
-  }
+  showCharacter = this.content === 'character';
 
   ngOnInit() {
-    console.log(this.characterID);
-    this.request();
-    console.log(this.character);
   }
 }

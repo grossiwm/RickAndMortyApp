@@ -19,7 +19,7 @@ export class CharactersPage implements OnInit {
   async presentModal() {
     const modal = await this.modal.create({
       component: ModalPage,
-      componentProps: { characterID: this.characterID }
+      componentProps: { content: 'character', characterID: this.characterID }
     });
     return await modal.present();
   }

@@ -1,4 +1,3 @@
-import { CharacterComponent } from './../character/character.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CharactersPage, CharacterComponent]
+  declarations: [CharactersPage]
 })
 export class CharactersPageModule {}
