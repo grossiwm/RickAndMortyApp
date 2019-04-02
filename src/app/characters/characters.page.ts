@@ -39,6 +39,11 @@ export class CharactersPage implements OnInit {
 
   }
 
+  getUpdatedCharacterFromChild(event) {
+    console.log('Valor recebido ', event);
+    this.characters = event.results;
+  }
+
   ngOnInit() {
     this.getChatacters();
   }

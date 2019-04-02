@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CharactersPage } from './characters.page';
+import { SearchbarComponent } from '../searchbar/searchbar.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CharactersPage]
+  declarations: [CharactersPage, SearchbarComponent]
 })
 export class CharactersPageModule {}
